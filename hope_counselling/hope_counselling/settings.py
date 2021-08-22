@@ -56,7 +56,10 @@ ROOT_URLCONF = 'hope_counselling.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'home/templates/home'],
+        'DIRS': [
+            BASE_DIR / 'home/templates/home',
+            BASE_DIR / 'templates'
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
