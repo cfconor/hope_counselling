@@ -1,10 +1,20 @@
 {% extends "base.html" %}
 {% load static %}
+{% block userstyles %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
 
 {% block pagetitle %}Home{% endblock %}
 
 {% block content %}
-<img src="{{ static 'img/home-image.jpg' }}" class="img-fluid" alt="Hope Counselling Homepage image">
+<div class="row">
+    <div class="col-4">
+
+    </div>
+    <div class="col-8">
+        <img src="{% static 'img/home-image.jpg' %}" class="img-fluid" alt="Hope Counselling Homepage image">
+    </div>
+</div>
 
 
 {% endblock %}
