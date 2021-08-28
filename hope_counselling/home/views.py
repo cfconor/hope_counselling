@@ -16,3 +16,7 @@ def index(request):
 
 
     return render(request, 'index.html')
+
+def our_team(request):
+
+    return render(request, 'our-team.html')
