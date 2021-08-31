@@ -11,12 +11,14 @@ db = db_client[os.getenv('DB_NAME')]
 counsellor_coll = db["Counsellor"]
 
 def index(request):
-    title = "DB Test"
-    db_q = str(counsellor_coll.find_one({"first_name": "Jimmy"}))
-
 
     return render(request, 'index.html')
 
 def our_team(request):
+    all_counsellors = counsellor_coll.find()
 
     return render(request, 'our-team.html')
+
+def schedule(request):
+
+    return render(request, 'schedule.html')

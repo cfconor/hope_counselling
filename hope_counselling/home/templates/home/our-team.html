@@ -1,9 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
+{% block userstyles %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
 
 {% block pagetitle %}Meet the Team{% endblock %}
 
-{% block content %}
+{% block pageheader %}
 
+{% endblock %}
+
+{% block content %}
+<h1>Our Team</h1>
 
 {% endblock %}

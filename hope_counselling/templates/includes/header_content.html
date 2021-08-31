@@ -5,10 +5,10 @@
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
                 <a class="nav-link" href="#">About Us</a>
-                <a class="nav-link" href="#">Our Team</a>
-                <a class="nav-link" href="#">Book Now</a>
+                <a class="nav-link" href="{% url 'our_team' %}">Our Team</a>
+                <a class="nav-link" href="{% url 'schedule' %}">Book Now</a>
                 <a class="nav-link" href="#">Contact Us</a>
             </div>
         </div>

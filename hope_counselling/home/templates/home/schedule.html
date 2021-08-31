@@ -1,8 +1,21 @@
 {% extends "base.html" %}
 {% load static %}
+{% block userstyles %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
 
 {% block pagetitle %}Book an Appointment{% endblock %}
 
 {% block content %}
+<h1>Book An Appointment</h1>
+
+<form action="">
+    <p>Pick a Date</p>
+    <input type="text" name="" id="datepicker">
+</form>
+
 {% endblock %}
 
+{% block userjs %}
+    <script src="{% static 'js/datepicker.js' %}"></script>
+{% endblock %}
