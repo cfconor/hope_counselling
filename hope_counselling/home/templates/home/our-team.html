@@ -7,10 +7,20 @@
 {% block pagetitle %}Meet the Team{% endblock %}
 
 {% block pageheader %}
-
+    <h1>Our Team</h1>
 {% endblock %}
 
 {% block content %}
-<h1>Our Team</h1>
+    {% for counsellor in found_counsellors %}
+        <div class="row">
+            <div class="col">
+                <h3>{{ counsellor.first_name }} {{ counsellor.last_name }}</h3>
+                <p>
+                    {{ counsellor.profile }}
+                </p>
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
 
 {% endblock %}

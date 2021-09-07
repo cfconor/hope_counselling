@@ -1,12 +1,21 @@
+/** General Styling **/
+
 #main-page-title {
     padding-bottom: 30px;
     padding-top: 30px;
 }
 
-#main-page-title h1 {
+#main-page-title h1, #pageheader h1 {
     font-family: 'Tangerine', cursive;
-    font-size: 100px;
     color: green;
+}
+
+#main-page-title h1 {
+    font-size: 100px;
+}
+
+#pageheader h1 {
+    font-size: 60px;
 }
 
 #index-main-image {
@@ -14,7 +23,16 @@
     object-fit: contain;
 }
 
+#main-body {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 footer {
     padding-top: 20px;
     background-color: green;
 }
+
+/** Media Queries **/

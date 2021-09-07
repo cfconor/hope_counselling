@@ -6,13 +6,18 @@
 
 {% block pagetitle %}Book an Appointment{% endblock %}
 
-{% block content %}
-<h1>Book An Appointment</h1>
+{% block pageheader %}
+    <div class="row">
+        <div class="col">
+            <h1>Book An Appointment</h1>
+        </div>
+    </div>
+    <hr class="my-4">
+{% endblock %}
 
-<form action="">
-    <p>Pick a Date</p>
-    <input type="text" name="" id="datepicker">
-</form>
+{% block content %}
+
+<p>SHOWING AVAILABLE TIMES</p>
 
 {% endblock %}
 

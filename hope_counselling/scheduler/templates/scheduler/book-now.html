@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block userstyles %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+
+{% block pagetitle %}Book an Appointment{% endblock %}
+
+{% block pageheader %}
+    <div class="row">
+        <div class="col">
+            <h1>Book An Appointment</h1>
+        </div>
+    </div>
+    <hr class="my-4">
+{% endblock %}
+
+{% block content %}
+
+    <form action="{% url 'show-available-times' %}" method="get">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="choose-date">Choose a date:</label>
+            <input type="text" name="choose-date" id="datepicker">
+        </div>
+        <button type="submit" class="btn btn-primary">Check for Availability</button>
+    </form>
+
+{% endblock %}
+
+{% block userjs %}
+    <script src="{% static 'js/datepicker.js' %}"></script>
+{% endblock %}

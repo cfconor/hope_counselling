@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 import pymongo
 import env
 import os
@@ -8,17 +7,35 @@ db_client = pymongo.MongoClient(os.getenv('DB_CONN_STR'))
 
 db = db_client[os.getenv('DB_NAME')]
 
-counsellor_coll = db["Counsellor"]
+counsellors = db["Counsellor"]
 
 def index(request):
 
     return render(request, 'index.html')
 
 def our_team(request):
-    all_counsellors = counsellor_coll.find()
+    all_counsellors = counsellors.find()
+    context = {}
+    found_counsellors = {}
 
-    return render(request, 'our-team.html')
+    for counsellor in all_counsellors:
+        print("counsellor")
+        print(counsellor)
 
-def schedule(request):
+        print("counsellor")
+        print(counsellor)
 
-    return render(request, 'schedule.html')
+        print("counsellor")
+        print(type(counsellor))
+
+        found_counsellors[counsellor[_id]] = {
+            "first_name" : counsellor[first_name],
+            "last_name" : counsellor[last_name],
+            "profile" : counsellor[profile]
+        }
+    
+    print("Counsellors added to counsellors variable:")
+    print(found_counsellors)
+
+    return render(request, 'our-team.html', found_counsellors)
+
